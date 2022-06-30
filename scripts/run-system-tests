@@ -9,7 +9,7 @@
 # list of system test simulations to run
 tests="
 1 1000 search-01
-1000 2000 search-02
+1000 5000 search-02
 "
 
 # directories for input and output files

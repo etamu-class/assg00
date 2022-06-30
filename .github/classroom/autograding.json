@@ -29,6 +29,16 @@
       "comparison": "included",
       "timeout": 10,
       "points": 25
+    },
+    {
+      "name": "system tests",
+      "setup": "make",
+      "run": "./scripts/run-system-tests",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 0
     }
   ]
 }
