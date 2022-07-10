@@ -33,6 +33,7 @@
 	"remoteUser": "vscode",
 	"features": {
 		"git": "os-provided"
-	},
-        "postCreateCommand": "sudo chown -R vscode:vscode /workspaces/"
+	}
+    //"postCreateCommand": "sudo chown -R vscode:vscode /workspaces/"
+    //"postCreateCommand": "git config --global --add safe.directory /workspaces/assg00"
 }
