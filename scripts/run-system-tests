@@ -57,11 +57,15 @@ do
     numtests=$(( numtests + 1 ))
 done
 
+# display final result of tests, give explicit non-zero exit code on failure so workflow detects
+# failed tests
 if [ ${passed} -eq ${numtests} ]
 then
     echo -e "${GREEN}===============================================================================${NORMAL}"
     echo -e "${GREEN}All system tests passed    ${NORMAL} (${passed} tests passed of ${numtests} system tests)"
+    exit 0
 else
     echo -e "${RED}===============================================================================${NORMAL}"
     echo -e "${RED}System test failures detected${NORMAL} (${passed} tests passed of ${numtests} system tests)"
+    exit 1
 fi
