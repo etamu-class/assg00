@@ -16,4 +16,3 @@
 // function prototypes for Assignment Example
 // you should put in the function prototypes for the two functions
 // you implement in the .cpp file here so they can be included where needed
-bool isPrime(int value);

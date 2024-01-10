@@ -27,7 +27,7 @@ using namespace std;
 
 // change these to #define when ready to begin working on each task,
 // once defined they will enable the tests declared below for each task
-#define task1
+#undef task1
 #undef task2
 
 /** isPrime() test cases

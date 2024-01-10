@@ -134,9 +134,9 @@ g++ -Wall -Werror -pedantic -g  obj/test-primes.o  obj/primes.o ../assg-base-0.3
 g++ -Wall -Werror -pedantic -g -Iinclude -I../assg-base-0.3/include -c src/main.cpp -o obj/main.o
 g++ -Wall -Werror -pedantic -g  obj/main.o  obj/primes.o -o debug
 ```
-- `ctrl-shift-t` make tests
+- `ctrl-shift-t` make unit-tests
 ```
-> Executing task: make tests <
+> Executing task: make unit-tests <
 
 ././test --use-colour yes
 ===============================================================================
