@@ -780,7 +780,7 @@ make sure you associate the issue for Task 2 with this pull request.
 
 ### Complete findPrimes() Task 2
 
-We are almost done with this practice assignment.  Lets complete the `findPrimes()`
+Lets complete the `findPrimes()`
 function so that it passes all of the tests.  This function is supposed to search
 all primes in the given range, and return the count of the number of primes it finds
 within the range.  Modify your implementation of `findPrimes()` with the following
@@ -852,25 +852,46 @@ final build from scratch to be sure.  Try doing a `make clean`, and
 then rebuild and run the tests.  If all tests are uncommented, and all
 of them are passing, then you are in good shape at this point.
 
-To finish the assignment, you should create a final commit of these
-changes in `primes.cpp` to implement your `findPrimes()` function.
-Make sure to give a good and appropriate commit message.  Push the
-changes to your GitHub repository.  When you are finished, it is a
-good idea then to leave a final comment in your pull request stating
-that you think you are finished and ready to have the work evaluated.
-The instructor may give feedback during your development, or at the
-end.  You should notice that your final commit is now passing all of
-the build tasks on GitHub.  This is a good sign for the assignment.
-Though passing all of the tests may not mean you have completed all of
-the work successfully yet.  For example, at times you may need to
-implement some functions or code in a specific way, and if you do not
-do this, even though you may be passing the tests, you may not be
-given full credit unless you correct your implementation to follow the
-instructions.  Likewise, you may be asked to follow particular style
-or formatting guidelines of your code.  For example, you will be
-required to provide function documentation for all of your functions,
-like the comments before the 2 functions you were given here.
+To finish the tasks for this assignment, you should create a final
+commit of these changes in `primes.cpp` to implement your
+`findPrimes()` function.  Make sure to give a good and appropriate
+commit message.  Push the changes to your GitHub repository.  When you
+are finished, it is a good idea then to leave a final comment in your
+pull request stating that you think you are finished and ready to have
+the work evaluated.  The instructor may give feedback during your
+development, or at the end.  You should notice that your final commit
+is now passing all of the build tasks on GitHub.  This is a good sign
+for the assignment.  Though passing all of the tests may not mean you
+have completed all of the work successfully yet.  For example, at
+times you may need to implement some functions or code in a specific
+way, and if you do not do this, even though you may be passing the
+tests, you may not be given full credit unless you correct your
+implementation to follow the instructions.  Likewise, you may be asked
+to follow particular style or formatting guidelines of your code.  For
+example, you will be required to provide function documentation for
+all of your functions, like the comments before the 2 functions you
+were given here.
 
+## Implement Full Simulation and Pass the System Tests
+
+For this practice assignment, even once you are passing all of the
+unit tests, the system tests will fail to successfully pass for you.
+For assignments in this class, there may be some final steps you
+will perform to get full simulations running.
+
+For this practice, open and read the `assg00-sim.cpp` file.  There is
+a line of code commented out in this file, that if enabled, will
+call your function from task 2, which will then let the full system
+tests to pass in this practice.
+
+You may want to exam the `assg00-sim.cpp` file a bit.  It has a
+`main()` function that performs some command line
+options and flags parsing.  This code will be the starting point
+for the simulations created for the assignments in this class.
+
+To pass the system tests, you will need to fix/enable the
+simulation and create a final commit, then push it to your
+repository.
 
 # Assignment Submission
 
