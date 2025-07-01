@@ -1,6 +1,6 @@
 ---
 title: 'Assignment Example: Example Workflow for Class Assignments to Setup Git, GitHub and VSCode Dev Containers'
-author: 'CSci 430: Introduction to Operating Systems'
+author: 'ETAMU Class: Example Class Assignment'
 date: ''
 ---
 
@@ -36,10 +36,10 @@ the tools we will be using.
 
 # Pre-Setup and Configuration
 
-You need to complete the steps in the DevelopmentEnvironmentSetup.md file
-before continuing with this practice assignment.  All assignments assume
-that you have the following configurations completed in order to work on the
-assignments.
+All assignments assume that you have installed and configured the following
+tools 
+(see [Instructions for Setting Up git/GitHub, Docker and VSCode](https://github.com/etamu-class/vscode-docker-devcontainer) 
+for tools/environment setup instructions) in order to work on the assignments:
 
 1. You have created a GitHub account to use for this class.
 2. You have set up your GitHub ssh key so that you can clone repositories that
@@ -51,32 +51,20 @@ assignments.
    provided build tools and extensions, and can push your work back to your
    repositories for grading.
 
-If you have a working VSCode IDE, and have set up the Dev Containers, then
+If you have a working VSCode IDE, and have set up Docker and DevContainers, then
 you can proceed with this and all assignments for the class.
 
-When your development environment is configured and ready, before each assignment
-you will perform the following steps to begin working on the assignment.
+Before each assignment you will perform the following steps to begin working on the assignment.
 
 ## Accept the Assignment to create your repository on GitHub
 
-For all assignments you will be given a link that will allow you to accept
+For all assignments you will be given a GitHubClassroom Invitation Link that will allow you to accept
 the GitHub classroom assignment.  Accepting the assignment will make
 a copy of the assignment code in your GitHub account from the
 assignment template.  Once you accept the assignment, you will have
 a GitHub repository that you can clone and push your work back into
 for grading.
 
-By following assignment invitation link, you will be taken to GitHub,
-where you will be asked to accept the assignment.  If this is the
-first assignment you are accepting, you need to associate your GitHub
-account with the class ID that identifies you as a member of this
-class.  Please let me know if you do not see yourself listed as a
-student here.  Once you select your student ID, you will need to
-create a team name.  Teams of 2 or 3 students may be allowed for
-the class.  Ask the instructor before starting assignment 01 about
-forming teams.  There are additional work that needs to be done
-to collaborate successfully using git if you form a team, so be
-aware of that.
 
 ## Clone Repository using SSH to a VSCode Dev Container
 
@@ -92,7 +80,7 @@ in your VSCode IDE, as described in the more detailed environment
 detailed instructions.
 
 In the "Remote Explorer", if you hover over the CONTAINERS item, there
-will be a "+" mark allowing yout to create a new container.  Select
+will be a "+" mark allowing you to create a new container.  Select
 the "+" to create a new container, then select "Clone Repository
 in Container Volume...".  This will allow you to clone your 
 GitHub repository into a suitable Dev Container with all 
@@ -101,16 +89,13 @@ You should copy and paste the repository ssh url when asked here for
 the repository url, so that you can have write access to push
 back your work to your GitHub repository.
 
-TODO: determine the best procedure to clone repository into a remote
-container.
-
 
 ## Check that Initial Project Files Compile and Run Tests
 
 Before starting to implement the assignment tasks, confirm that your
 starting code is compiling and running.  From your VSCode Dev Container, open
-the `assg00` folder if it is not currently open.  Then perform a `make
-clean / make all / make tests`.  You can use VSCode command palette to
+the `assg00` folder if it is not currently open.  Then perform a 
+`make clean / make all / make unit-tests`.  You can use VSCode command palette to
 perform the `Run Task` command, and select these tasks from the
 command palette.  Keyboard shortcuts should already be assigned to
 these common tasks, so you could do them as follows
@@ -144,8 +129,8 @@ No tests ran
 ```
 
 The project should compile cleanly with no errors when you do the
-`make build`, and the tests should run from `make tests`, though all
-tests are currently undefined, so there are not actual tests available
+`make all`, and the tests should run from `make unit-tests`, though all
+tests are currently undefined, so there are no actual tests available
 to run yet.
 
 
@@ -156,7 +141,7 @@ For all of the assignments for this class you will follow the same steps
 in the previous section(s) when you get started on a new assignment.
 
 1. Accept the assignment invitation from GitHub classroom to create
-   the assignment repository in your GitHub acount.
+   the assignment repository in your GitHub account.
 2. Clone the repository to a VSCode Dev Container using the SSH URL of your
    GitHub repository for the assignment.
 3. Confirm that the project builds and runs, though no tests may be be
@@ -167,8 +152,7 @@ in the previous section(s) when you get started on a new assignment.
    and create them from the issue templates for the assignment. Also make sure
    you link the issue(s) with the `Feedback` pull request.
    
-At this point for each assignment, you will be ready to begin reading the
-assignment description and working on the assignment tasks.
+You are now ready to begin reading the assignment description and working on the assignment tasks.
 
 
 # Overview and Setup
@@ -179,7 +163,6 @@ cloned the assignment to a Dev Container in your VSCode IDE.  We will
 start each assignment with a description of the general setup of the
 assignment, and an overview of the assignment tasks.
 
-
 For this practice assignment you have been given the following files (among many others):
 
 | File Name              | Description                                                                 |
@@ -189,6 +172,8 @@ For this practice assignment you have been given the following files (among many
 | `include/primes.hpp`   | Header file for function prototypes you are to add for this assignment.     |
 | `src/primes.cpp`       | Implementation file for the functions you are to write for this assignment. |
 
+You should find these files in the VSCode file `Explorer` on the left hand side
+of your open project container.
 
 All assignments for this class are multi-file projects.  All source
 files will be in the `src` subdirectory, and all header files which
@@ -202,11 +187,11 @@ to the GitHub repository.  This commit task will run the same tests
 that you have in your local repository, and that you need to get
 working for the assignment.
 
-For this practice assignment, you will need to add codes into two
+For this practice assignment, you will need to add code into two
 files, named `primes.hpp` and `primes.cpp`.  In addition, the unit
 tests you need to pass for the practice assignment are given to you in
-`assg00-tests.cpp`.  Some or all of these tests will be commented out
-to begin with for the assignments.  You will uncomment the tests and
+`assg00-tests.cpp`.  Some or all of these tests will be disabled/undefined
+to begin with for the assignments.  You will define the tests and
 write the code to get the tests to pass as the main work for each
 assignment.
 
@@ -224,8 +209,6 @@ project that is currently not running and compiling.  Do not write
 more than 2 or 3 lines of code at a time without trying to compile and
 run your project.
 
-
-
 # Assignment Tasks
 
 Now we will walk through the typical tasks and workflow you will
@@ -235,6 +218,7 @@ tasks in the given order here, and do not move on to the next task
 until you have successfully completed the current one.  You will be
 required to, at a minimum, push 1 commit for each defined task of the
 assignment to your GitHub classroom repository.
+
 You can certainly make more commits, and are most likely to need to do
 so as you will inevitably make some mistakes and push incomplete work
 or work with problems.  This is fine, and actually normal and expected
@@ -252,16 +236,13 @@ will automatically gather all commits to the `main` branch.  You can
 communicate with me, and I will give back comments on the `Feedback`
 pull request of your progress for the assignment.  You should not
 close or merge the `Feedback` pull request.  When I am satisfied you
-have 100% completed an assignment, I will merge and close the
-`Feedback` pull request for you.  This is an indication that you have
-completed all parts of an assignment.  If the `Feedback` pull request
-is still open, it means I have not yet accepted it fully, and there
-may be comments or requirements from me for additional tasks or items
-you need to fix before your work is considered 100% complete.
+have 100% completed an assignment, I will give a code review and
+evaluation of your work, and may merge or close the `Feedback` pull
+request if the assignment is 100% complete.
 
 For this practice assignment, the goal is to create two functions
 named `isPrime()` and `findPrimes()`.  Then finally these functions
-are used in a command line simulation tool.  We will start with the
+are used in a command line tool.  We will start with the
 first function.
 
 ## Task 1: Implement `isPrime()` Function
@@ -301,8 +282,8 @@ the line like this to define the task 1 tests:
 #define task1
 ```
 
-After defining the task1 test case, perform a `make
-build` of your code.  You should find that the build will fail with
+After defining the task1 test case, perform a 
+`make all` of your code.  You should find that the build will fail with
 the following message:
 
 ```
@@ -325,7 +306,7 @@ What is happening here is that these tests are trying to test the
 implementation of an `isPrime()` function, but there is no
 implementation yet of this function.  You are going to implement this
 function.  Lets start by creating a stub for the function, so that we
-can get our code to compile and run correctly.
+can get our code to compile and at least run again.
 
 We need to put a function prototype for this function into the
 `primes.hpp` header file.  A function prototype can be used in a
@@ -414,7 +395,7 @@ Make sure that you add in the implementation directly under the documentation fo
 `isPrime()` function, which should already be available to you in the starting code for
 this practice assignment.
 
-Notice that this is not really a correct implementation.  It is a placeholder function,
+Notice that this is not really a correct implementation.  It is a placeholder function (a function stub),
 it always just answers `true` whenever it is asked if any `value` is a prime
 number or not.  It is ignoring the input parameter, so it is not really testing
 if the `value` is prime or not.
@@ -436,7 +417,7 @@ Always make sure your program is in a compilable state.  If it can compile the `
 we can run the unit tests, and see how well our implementation is working so far.
 
 ```
-$ make tests
+$ make unit-tests
 ././test --use-colour yes
 
 
@@ -523,8 +504,7 @@ make: *** [include/Makefile.inc:60: tests] Error 13
 ```
 
 Here you should see, that while the tests run, many of the tests
-are failing, as can be seen from the output of running the tests.
-If you look closely back at the `assg00-tests.cpp` file, you will
+are failing. If you look closely back at the `assg00-tests.cpp` file, you will
 see that not all of the tests are failing.  It actually passes the
 first 3 tests that check if 1, 2 and 3 are prime.  This should make
 sense, because your stub function always returns `true`, so if the
@@ -539,9 +519,9 @@ code to compile and run the tests is a good milestone for this
 practice assignment.  Lets add these changes to the `Feedback` pull
 request by making a commit, and pushing the commit to your repository.
 
-Open the Git section in VSCode.  You will see that the 3 files you modified
+Open the Git 'Source Control' section in VSCode (left hand side bar).  You will see that the 3 files you modified
 are now listed as changed in your repository.  Perform a `stage all changes`
-to add all of these 3 file changes to the commit you are creating.  Once the
+to add all 3 of these files to the commit you are creating.  Once the
 files are staged for the commit, write a commit message and then select
 the check-mark to commit these changes to your current `main` branch.
 Try and always use good commit messages.  Read the following:
@@ -561,10 +541,9 @@ the answer to be true for a given value.
 ```
 
 Once your changes are committed, a new commit version is created.
-However, this commit is only local to your DevBox.  You need to push
-your commit in the `main` branch to your remote repository to your
-remote repository, so that the instructor can see and evaluate your
-work.
+However, this commit is only local to your DevContainer working repository.  You need to push
+your commit in the `main` branch to your remote repository, 
+so that the instructor can see and evaluate your work.
 
 At the bottom of your VSCode window is some status information about
 your repository.  Next to the `main` branch indication, should be
@@ -654,7 +633,7 @@ g++ -Wall -Werror -pedantic -g  obj/assg00-tests.o  obj/primes.o obj/catch2-main
 g++ -Wall -Werror -pedantic -g -Iinclude -c src/assg00-sim.cpp -o obj/assg00-sim.o
 g++ -Wall -Werror -pedantic -g  obj/assg00-sim.o  obj/primes.o  -o sim
 
-$ make tests
+$ make unit-tests
 ././test --use-colour yes
 ===============================================================================
 All tests passed (24 assertions in 1 test case)
@@ -887,7 +866,7 @@ tests to pass in this practice.
 You may want to exam the `assg00-sim.cpp` file a bit.  It has a
 `main()` function that performs some command line
 options and flags parsing.  This code will be the starting point
-for the simulations created for the assignments in this class.
+for the simulations we implement in this class.
 
 To pass the system tests, you will need to fix/enable the
 simulation and create a final commit, then push it to your
@@ -930,7 +909,7 @@ this class:
    style checker should properly indent your code when you save it,
    but if not you may need to check or correct this if code is
    misaligned or not properly indented.
-2. Variable and function names must use `camelCaseNameingNotation`.
+2. Variable and function names must use `camelCaseNamingNotation`.
    All variable and function names must begin with a lowercase letter.
    Do not use underscores between words in the variable or function
    name.  Often function names will be given to you, but you will need
